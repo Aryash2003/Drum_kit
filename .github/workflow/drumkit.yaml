@@ -1,0 +1,14 @@
+name: Drum-kit
+
+on: push
+
+jobs:
+  drum-kit:
+    -name: drumkit ocde base
+    uses: actions/checkout@v2
+    
+    -name: Run Drumkit
+    uses: github/drum-kit@v3
+    env:
+      DEFAULT_BRANCH: main
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
